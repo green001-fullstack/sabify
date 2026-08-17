@@ -114,6 +114,9 @@ Matched students can view group members, shared course, recommended focus topics
 - **Student dashboard:** enrolled courses, progress, upcoming assignments, recent grades, weak topics, AI recommendations, study group matches
 - **Teacher dashboard:** total courses/students, active quizzes, average class performance, recent submissions, AI-generated insights, students needing attention
 
+### 9. Roadmap
+Here, when a student logs in to his dashboard, he will be asked questions on what he wants to learn and the AI will generate a roadmap journey based on his answer
+
 ---
 
 ## Architecture
