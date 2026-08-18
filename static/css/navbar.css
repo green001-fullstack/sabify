@@ -1,0 +1,368 @@
+/* ========================================
+   SITE HEADER
+   ======================================== */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: var(--z-sticky);
+
+    width: 100%;
+}
+
+
+/* ========================================
+   NAVBAR
+   ======================================== */
+
+.navbar {
+    width: 100%;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    border-bottom: 1px solid
+        rgba(226, 232, 240, 0.8);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+
+/* ========================================
+   NAVBAR INNER
+   ======================================== */
+
+.navbar-inner {
+    min-height: 76px;
+
+    display: flex;
+    align-items: center;
+
+    gap: var(--space-8);
+}
+
+
+/* ========================================
+   BRAND
+   ======================================== */
+
+.navbar-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    flex-shrink: 0;
+}
+
+.brand-name {
+    font-size: var(--text-lg);
+    font-weight: var(--font-bold);
+
+    letter-spacing: -0.02em;
+
+    color: var(--color-text-primary);
+}
+
+
+/* ========================================
+   BRAND MARK
+   ======================================== */
+
+.brand-mark {
+    width: 34px;
+    height: 34px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 3px;
+
+    padding: 7px;
+
+    border-radius: 10px;
+
+    background: var(--gradient-ai);
+
+    box-shadow:
+        0 4px 12px rgba(79, 70, 229, 0.25);
+}
+
+.brand-mark-dot {
+    border-radius: 50%;
+
+    background: white;
+
+    opacity: 0.95;
+}
+
+.brand-mark-dot:first-child {
+    transform: translateY(2px);
+}
+
+.brand-mark-dot:last-child {
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   CENTER NAVIGATION
+   ======================================== */
+
+.navbar-center {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    margin-inline: auto;
+}
+
+.navbar-link {
+    position: relative;
+
+    padding: 8px 12px;
+
+    border-radius: var(--radius-md);
+
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+
+    color: var(--color-text-secondary);
+
+    transition:
+        color var(--transition-normal),
+        background var(--transition-normal);
+}
+
+.navbar-link:hover {
+    color: var(--color-text-primary);
+
+    background: var(--color-primary-light);
+}
+
+
+/* ========================================
+   NAVBAR ACTIONS
+   ======================================== */
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+
+    gap: var(--space-4);
+
+    flex-shrink: 0;
+}
+
+.navbar-login {
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+
+    color: var(--color-text-secondary);
+
+    transition:
+        color var(--transition-normal);
+}
+
+.navbar-login:hover {
+    color: var(--color-primary);
+}
+
+
+/* ========================================
+   CTA
+   ======================================== */
+
+.navbar-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 10px 16px;
+
+    border-radius: var(--radius-md);
+
+    background: var(--gradient-ai);
+
+    color: white;
+
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+
+    box-shadow:
+        0 4px 14px rgba(79, 70, 229, 0.2);
+
+    transition:
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+.navbar-cta:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 8px 20px rgba(79, 70, 229, 0.28);
+}
+
+.navbar-cta-arrow {
+    transition:
+        transform var(--transition-normal);
+}
+
+.navbar-cta:hover .navbar-cta-arrow {
+    transform: translateX(3px);
+}
+
+
+/* ========================================
+   MOBILE BUTTON
+   ======================================== */
+
+.mobile-menu-button {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    margin-left: auto;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    gap: 5px;
+
+    border-radius: var(--radius-md);
+
+    background: transparent;
+
+    transition:
+        background var(--transition-normal);
+}
+
+.mobile-menu-button:hover {
+    background: var(--color-primary-light);
+}
+
+.mobile-menu-button span {
+    width: 20px;
+    height: 2px;
+
+    border-radius: 10px;
+
+    background: var(--color-text-primary);
+
+    transition:
+        transform var(--transition-normal),
+        opacity var(--transition-normal);
+}
+
+
+/* ========================================
+   MOBILE NAVIGATION
+   ======================================== */
+
+.mobile-navigation {
+    display: none;
+
+    overflow: hidden;
+
+    max-height: 0;
+
+    opacity: 0;
+
+    border-top: 1px solid transparent;
+
+    transition:
+        max-height 350ms ease,
+        opacity 250ms ease,
+        border-color 250ms ease;
+}
+
+.mobile-navigation.is-open {
+    max-height: 500px;
+
+    opacity: 1;
+
+    border-color: var(--color-border-light);
+}
+
+.mobile-navigation-inner {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+
+    padding: 16px;
+}
+
+.mobile-navigation-inner > a {
+    padding: 12px;
+
+    border-radius: var(--radius-md);
+
+    font-size: var(--text-base);
+    font-weight: var(--font-medium);
+
+    color: var(--color-text-secondary);
+
+    transition:
+        background var(--transition-normal),
+        color var(--transition-normal);
+}
+
+.mobile-navigation-inner > a:hover {
+    color: var(--color-text-primary);
+
+    background: var(--color-primary-light);
+}
+
+.mobile-navigation-actions {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    padding-top: 12px;
+
+    margin-top: 8px;
+
+    border-top: 1px solid var(--color-border);
+}
+
+.mobile-login {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 16px;
+
+    border-radius: var(--radius-md);
+
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+
+    color: var(--color-text-primary);
+
+    background: var(--color-background);
+}
+
+
+/* ========================================
+   MOBILE MENU ANIMATION
+   ======================================== */
+
+.mobile-menu-button.is-open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.mobile-menu-button.is-open span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-button.is-open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}

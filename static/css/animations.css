@@ -1,0 +1,86 @@
+/* ========================================
+   FADE UP
+   ======================================== */
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(24px);
+
+    transition:
+        opacity 600ms ease,
+        transform 600ms ease;
+}
+
+.fade-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ========================================
+   FADE IN
+   ======================================== */
+
+.fade-in {
+    opacity: 0;
+
+    transition: opacity 600ms ease;
+}
+
+.fade-in.is-visible {
+    opacity: 1;
+}
+
+
+/* ========================================
+   FLOAT
+   ======================================== */
+
+.float {
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+
+/* ========================================
+   REDUCED MOTION
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
+
+}

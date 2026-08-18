@@ -1,0 +1,617 @@
+/* ========================================
+   TABLET
+   ======================================== */
+
+@media (max-width: 1023px) {
+    .container {
+        width: min(
+            calc(100% - 2 * var(--page-padding-tablet)),
+            var(--container-width)
+        );
+    }
+
+    .section {
+        padding-block: var(--space-20);
+    }
+
+    h1 {
+        font-size: var(--text-4xl);
+    }
+
+    h2 {
+        font-size: var(--text-3xl);
+    }
+}
+
+
+/* ========================================
+   MOBILE
+   ======================================== */
+
+@media (max-width: 639px) {
+    .container {
+        width: calc(100% - 2 * var(--page-padding-mobile));
+    }
+
+    .section {
+        padding-block: var(--space-16);
+    }
+
+    h1 {
+        font-size: var(--text-4xl);
+    }
+
+    h2 {
+        font-size: var(--text-3xl);
+    }
+
+    h3 {
+        font-size: var(--text-xl);
+    }
+
+    .section-description {
+        font-size: var(--text-base);
+    }
+}
+
+/* ========================================
+   NAVBAR TABLET
+   ======================================== */
+
+@media (max-width: 900px) {
+
+    .navbar-center {
+        gap: 0;
+    }
+
+    .navbar-link {
+        padding-inline: 8px;
+
+        font-size: var(--text-xs);
+    }
+
+    .navbar-actions {
+        gap: var(--space-3);
+    }
+}
+
+
+/* ========================================
+   NAVBAR MOBILE
+   ======================================== */
+
+@media (max-width: 767px) {
+
+    .navbar-inner {
+        min-height: 68px;
+    }
+
+    .navbar-center,
+    .navbar-actions {
+        display: none;
+    }
+
+    .mobile-menu-button {
+        display: flex;
+    }
+
+    .mobile-navigation {
+        display: block;
+    }
+
+    .brand-name {
+        font-size: var(--text-base);
+    }
+
+    .brand-mark {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+/* ========================================
+   HERO TABLET
+   ======================================== */
+
+@media (max-width: 900px) {
+
+    .hero {
+        padding-top: 90px;
+    }
+
+    .hero-preview {
+        margin-top: 65px;
+    }
+
+    .hero-floating-badge {
+        right: -10px;
+    }
+
+    .dashboard-body {
+        grid-template-columns:
+            150px 1fr;
+    }
+
+    .dashboard-sidebar {
+        padding-inline: 10px;
+    }
+
+    .dashboard-main {
+        padding: 20px;
+    }
+}
+
+
+/* ========================================
+   HERO MOBILE
+   ======================================== */
+
+@media (max-width: 767px) {
+
+    .hero {
+        padding:
+            70px
+            0
+            60px;
+    }
+
+
+    .hero-label {
+        margin-bottom: 18px;
+
+        font-size: 9px;
+    }
+
+
+    .hero-title {
+        font-size:
+            clamp(
+                2.5rem,
+                13vw,
+                3.5rem
+            );
+
+        line-height: 1.02;
+    }
+
+
+    .hero-description {
+        margin-top: 22px;
+
+        font-size: 15px;
+
+        line-height: 1.65;
+    }
+
+
+    .hero-actions {
+        flex-direction: column;
+
+        width: 100%;
+
+        margin-top: 28px;
+    }
+
+
+    .hero-primary,
+    .hero-secondary {
+        width: 100%;
+
+        min-height: 52px;
+    }
+
+
+    .hero-preview {
+        margin-top: 55px;
+    }
+
+
+    .hero-floating-badge {
+        display: none;
+    }
+
+
+    .hero-dashboard {
+        border-radius: 15px;
+    }
+
+
+    .dashboard-topbar {
+        height: 48px;
+
+        padding-inline: 14px;
+    }
+
+
+    .dashboard-body {
+        display: block;
+
+        min-height: 0;
+    }
+
+
+    .dashboard-sidebar {
+        display: none;
+    }
+
+
+    .dashboard-main {
+        padding: 16px;
+    }
+
+
+    .dashboard-heading h3 {
+        font-size: 15px;
+    }
+
+
+    .dashboard-stats {
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 8px;
+    }
+
+
+    .dashboard-stat {
+        padding: 12px;
+    }
+
+
+    .dashboard-stat:last-child {
+        grid-column: 1 / -1;
+    }
+
+
+    .dashboard-stat-value {
+        font-size: 18px;
+    }
+
+
+    .dashboard-analysis {
+        grid-template-columns: 1fr;
+    }
+
+
+    .performance-row {
+        grid-template-columns:
+            90px 1fr 30px;
+    }
+
+}
+
+
+/* ========================================
+   SMALL MOBILE - HOME PAGE
+   ======================================== */
+
+@media (max-width: 420px) {
+
+    .hero {
+        padding-top: 55px;
+    }
+
+
+    .hero-title {
+        font-size: 2.35rem;
+
+        letter-spacing: -0.045em;
+    }
+
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+
+    .dashboard-main {
+        padding: 12px;
+    }
+
+
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+
+
+    .dashboard-stat:last-child {
+        grid-column: auto;
+    }
+
+
+    .performance-row {
+        grid-template-columns:
+            80px 1fr 28px;
+
+        gap: 7px;
+    }
+
+
+    .performance-topic {
+        font-size: 8px;
+    }
+
+}
+
+/* ========================================
+   LEARNING LOOP — TABLET
+   ======================================== */
+
+@media (max-width: 900px) {
+
+    .learning-loop {
+        padding:
+            90px
+            0;
+    }
+
+    .learning-loop-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .learning-loop-grid::before {
+        display: none;
+    }
+
+}
+
+
+/* ========================================
+   LEARNING LOOP — MOBILE
+   ======================================== */
+
+@media (max-width: 767px) {
+
+    .learning-loop {
+        padding:
+            75px
+            0;
+    }
+
+    .learning-loop-header {
+        margin-bottom:
+            42px;
+    }
+
+    .learning-loop-title {
+        font-size:
+            2.2rem;
+    }
+
+    .learning-loop-description {
+        font-size:
+            0.9rem;
+    }
+
+    .learning-loop-grid {
+        grid-template-columns:
+            1fr;
+
+        gap:
+            12px;
+    }
+
+    .learning-step {
+        min-height:
+            auto;
+
+        padding:
+            22px;
+    }
+
+    .learning-step-top {
+        margin-bottom:
+            25px;
+    }
+
+}
+
+/* ========================================
+   INTELLIGENCE — TABLET
+   ======================================== */
+
+@media (max-width: 900px) {
+
+    .intelligence {
+        padding:
+            90px
+            0;
+    }
+
+    .intelligence-content {
+        grid-template-columns:
+            1fr;
+    }
+
+    .intelligence-copy {
+        padding:
+            45px;
+    }
+
+    .intelligence-visual {
+        min-height:
+            400px;
+    }
+
+}
+
+
+/* ========================================
+   INTELLIGENCE — MOBILE
+   ======================================== */
+
+@media (max-width: 767px) {
+
+    .intelligence {
+        padding:
+            75px
+            0;
+    }
+
+    .intelligence-title {
+        font-size:
+            2.2rem;
+    }
+
+    .intelligence-description {
+        font-size:
+            0.9rem;
+    }
+
+    .intelligence-switcher {
+        width:
+            100%;
+
+        max-width:
+            340px;
+    }
+
+    .intelligence-tab {
+        flex:
+            1;
+
+        min-width:
+            0;
+    }
+
+    .intelligence-panel {
+        border-radius:
+            16px;
+    }
+
+    .intelligence-copy {
+        padding:
+            30px
+            24px;
+    }
+
+    .intelligence-copy h3 {
+        font-size:
+            1.9rem;
+    }
+
+    .intelligence-visual {
+        min-height:
+            auto;
+
+        padding:
+            24px
+            16px;
+    }
+
+    .teacher-visual,
+    .student-visual {
+        padding:
+            14px;
+    }
+
+    .visual-stats {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .visual-stat:last-child {
+        grid-column:
+            1 / -1;
+    }
+
+}
+
+/* ========================================
+   QUIZ PREVIEW — TABLET
+   ======================================== */
+
+@media (max-width: 900px) {
+
+    .quiz-preview {
+        padding:
+            90px 0;
+    }
+
+    .quiz-builder {
+        grid-template-columns:
+            1fr;
+    }
+
+    .quiz-builder-sidebar {
+        border-right:
+            0;
+
+        border-bottom:
+            1px solid
+            var(--color-border-light);
+    }
+
+}
+
+
+/* ========================================
+   QUIZ PREVIEW — MOBILE
+   ======================================== */
+
+@media (max-width: 767px) {
+
+    .quiz-preview {
+        padding:
+            75px 0;
+    }
+
+    .quiz-preview-title {
+        font-size:
+            2.2rem;
+    }
+
+    .quiz-preview-description {
+        font-size:
+            0.9rem;
+    }
+
+    .quiz-builder {
+        border-radius:
+            16px;
+    }
+
+    .quiz-builder-sidebar {
+        padding:
+            24px;
+    }
+
+    .quiz-builder-main {
+        padding:
+            20px 16px;
+    }
+
+    .quiz-question-card {
+        padding:
+            18px;
+    }
+
+    .quiz-options {
+        grid-template-columns:
+            1fr;
+    }
+
+    .question-top {
+        align-items:
+            flex-start;
+
+        gap:
+            10px;
+
+        flex-direction:
+            column;
+    }
+
+    .quiz-actions {
+        align-items:
+            flex-start;
+
+        gap:
+            12px;
+
+        flex-direction:
+            column;
+    }
+
+}

@@ -1,0 +1,11 @@
+{{ define "body" }}
+
+{{ template "navbar" . }}
+
+<main>
+    {{ block "content" . }}{{ end }}
+</main>
+
+{{ template "footer" . }}
+
+{{ end }}

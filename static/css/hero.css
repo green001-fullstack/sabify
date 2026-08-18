@@ -1,0 +1,920 @@
+/* ========================================
+   HERO
+   ======================================== */
+
+.hero {
+    position: relative;
+
+    overflow: hidden;
+
+    padding:
+        110px
+        0
+        90px;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(99, 102, 241, 0.10),
+            transparent 38%
+        ),
+        var(--color-background);
+}
+
+
+/* ========================================
+   HERO BACKGROUND
+   ======================================== */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    top: -300px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(129, 140, 248, 0.14),
+            transparent 68%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   HERO CONTENT
+   ======================================== */
+
+.hero-content {
+    position: relative;
+
+    z-index: 1;
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   LABEL
+   ======================================== */
+
+.hero-label {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 22px;
+
+    padding: 7px 12px;
+
+    border: 1px solid
+        rgba(99, 102, 241, 0.18);
+
+    border-radius: 999px;
+
+    background:
+        rgba(99, 102, 241, 0.06);
+
+    color: var(--color-primary);
+
+    font-size: var(--text-xs);
+    font-weight: var(--font-semibold);
+
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.hero-label-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--color-primary);
+
+    box-shadow:
+        0 0 0 4px
+        rgba(99, 102, 241, 0.10);
+}
+
+
+/* ========================================
+   HERO TITLE
+   ======================================== */
+
+.hero-title {
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    font-size: clamp(
+        3rem,
+        7vw,
+        5.5rem
+    );
+
+    line-height: 0.98;
+
+    font-weight: var(--font-extrabold);
+
+    letter-spacing: -0.055em;
+
+    color: var(--color-text-primary);
+}
+
+
+/* ========================================
+   HERO HIGHLIGHT
+   ======================================== */
+
+.hero-title-highlight {
+    display: block;
+
+    background:
+        linear-gradient(
+            120deg,
+            var(--color-primary),
+            #7c3aed,
+            #2563eb
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    color: transparent;
+}
+
+
+/* ========================================
+   HERO DESCRIPTION
+   ======================================== */
+
+.hero-description {
+    max-width: 650px;
+
+    margin:
+        28px
+        auto
+        0;
+
+    color: var(--color-text-secondary);
+
+    font-size: clamp(
+        1rem,
+        2vw,
+        1.2rem
+    );
+
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   HERO ACTIONS
+   ======================================== */
+
+.hero-actions {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 34px;
+}
+
+
+/* ========================================
+   HERO PRIMARY BUTTON
+   ======================================== */
+
+.hero-primary {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    min-height: 50px;
+
+    padding:
+        0
+        22px;
+
+    border-radius: 12px;
+
+    background:
+        var(--gradient-ai);
+
+    color: white;
+
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+
+    box-shadow:
+        0 8px 25px
+        rgba(79, 70, 229, 0.22);
+
+    transition:
+        transform 200ms ease,
+        box-shadow 200ms ease;
+}
+
+.hero-primary:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(79, 70, 229, 0.30);
+}
+
+.hero-primary-arrow {
+    transition:
+        transform 200ms ease;
+}
+
+.hero-primary:hover
+.hero-primary-arrow {
+    transform: translateX(4px);
+}
+
+
+/* ========================================
+   HERO SECONDARY BUTTON
+   ======================================== */
+
+.hero-secondary {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    min-height: 50px;
+
+    padding:
+        0
+        20px;
+
+    border: 1px solid
+        var(--color-border);
+
+    border-radius: 12px;
+
+    background:
+        rgba(255, 255, 255, 0.75);
+
+    color: var(--color-text-primary);
+
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+
+    transition:
+        border-color 200ms ease,
+        background 200ms ease,
+        transform 200ms ease;
+}
+
+.hero-secondary:hover {
+    transform: translateY(-2px);
+
+    border-color:
+        rgba(99, 102, 241, 0.30);
+
+    background:
+        rgba(99, 102, 241, 0.04);
+}
+
+
+/* ========================================
+   PRODUCT PREVIEW
+   ======================================== */
+
+.hero-preview {
+    position: relative;
+
+    max-width: 1050px;
+
+    margin:
+        85px
+        auto
+        0;
+}
+
+
+/* ========================================
+   PREVIEW GLOW
+   ======================================== */
+
+.hero-preview::before {
+    content: "";
+
+    position: absolute;
+
+    width: 70%;
+    height: 50%;
+
+    left: 15%;
+    bottom: -30px;
+
+    background:
+        rgba(99, 102, 241, 0.20);
+
+    filter: blur(80px);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   DASHBOARD CARD
+   ======================================== */
+
+.hero-dashboard {
+    position: relative;
+
+    z-index: 1;
+
+    overflow: hidden;
+
+    border: 1px solid
+        rgba(226, 232, 240, 0.95);
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.94);
+
+    box-shadow:
+        0 30px 80px
+        rgba(15, 23, 42, 0.12),
+        0 8px 30px
+        rgba(15, 23, 42, 0.05);
+}
+
+
+/* ========================================
+   DASHBOARD TOP BAR
+   ======================================== */
+
+.dashboard-topbar {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    height: 58px;
+
+    padding:
+        0
+        20px;
+
+    border-bottom: 1px solid
+        var(--color-border-light);
+
+    background:
+        rgba(248, 250, 252, 0.85);
+}
+
+.dashboard-brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 12px;
+    font-weight: var(--font-semibold);
+
+    color: var(--color-text-primary);
+}
+
+.dashboard-brand-mark {
+    width: 22px;
+    height: 22px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 6px;
+
+    background:
+        var(--gradient-ai);
+
+    color: white;
+
+    font-size: 9px;
+    font-weight: 800;
+}
+
+.dashboard-dots {
+    display: flex;
+
+    gap: 5px;
+}
+
+.dashboard-dots span {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background:
+        #cbd5e1;
+}
+
+
+/* ========================================
+   DASHBOARD BODY
+   ======================================== */
+
+.dashboard-body {
+    display: grid;
+
+    grid-template-columns:
+        180px 1fr;
+
+    min-height: 420px;
+}
+
+
+/* ========================================
+   DASHBOARD SIDEBAR
+   ======================================== */
+
+.dashboard-sidebar {
+    padding: 20px 14px;
+
+    border-right: 1px solid
+        var(--color-border-light);
+
+    background:
+        #fafbfc;
+}
+
+.dashboard-sidebar-label {
+    margin:
+        0
+        10px
+        8px;
+
+    font-size: 9px;
+    font-weight: var(--font-semibold);
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+
+    color:
+        var(--color-text-muted);
+}
+
+.dashboard-sidebar-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding:
+        9px
+        10px;
+
+    margin-bottom: 3px;
+
+    border-radius: 8px;
+
+    color:
+        var(--color-text-secondary);
+
+    font-size: 11px;
+    font-weight: var(--font-medium);
+}
+
+.dashboard-sidebar-item.active {
+    background:
+        rgba(99, 102, 241, 0.09);
+
+    color:
+        var(--color-primary);
+
+    font-weight:
+        var(--font-semibold);
+}
+
+
+/* ========================================
+   DASHBOARD MAIN
+   ======================================== */
+
+.dashboard-main {
+    padding: 25px;
+}
+
+.dashboard-heading {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+.dashboard-heading h3 {
+    margin: 0;
+
+    font-size: 18px;
+
+    letter-spacing: -0.025em;
+
+    color:
+        var(--color-text-primary);
+}
+
+.dashboard-heading p {
+    margin-top: 4px;
+
+    font-size: 10px;
+
+    color:
+        var(--color-text-muted);
+}
+
+
+/* ========================================
+   STAT CARDS
+   ======================================== */
+
+.dashboard-stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+}
+
+.dashboard-stat {
+    padding: 16px;
+
+    border:
+        1px solid
+        var(--color-border-light);
+
+    border-radius: 12px;
+
+    background:
+        white;
+}
+
+.dashboard-stat-label {
+    font-size: 9px;
+
+    color:
+        var(--color-text-muted);
+}
+
+.dashboard-stat-value {
+    margin-top: 7px;
+
+    font-size: 22px;
+    font-weight: var(--font-bold);
+
+    letter-spacing: -0.04em;
+
+    color:
+        var(--color-text-primary);
+}
+
+.dashboard-stat-change {
+    margin-top: 4px;
+
+    font-size: 9px;
+
+    color:
+        #16a34a;
+}
+
+
+/* ========================================
+   DASHBOARD ANALYTICS
+   ======================================== */
+
+.dashboard-analysis {
+    display: grid;
+
+    grid-template-columns:
+        1.4fr 1fr;
+
+    gap: 12px;
+
+    margin-top: 12px;
+}
+
+.dashboard-panel {
+    padding: 18px;
+
+    border:
+        1px solid
+        var(--color-border-light);
+
+    border-radius: 12px;
+
+    background:
+        white;
+}
+
+.dashboard-panel-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 16px;
+}
+
+.dashboard-panel-title {
+    font-size: 11px;
+
+    font-weight:
+        var(--font-semibold);
+
+    color:
+        var(--color-text-primary);
+}
+
+.dashboard-panel-meta {
+    font-size: 9px;
+
+    color:
+        var(--color-text-muted);
+}
+
+
+/* ========================================
+   PERFORMANCE BARS
+   ======================================== */
+
+.performance-row {
+    display: grid;
+
+    grid-template-columns:
+        110px 1fr 35px;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 13px;
+}
+
+.performance-topic {
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+
+    font-size: 9px;
+
+    color:
+        var(--color-text-secondary);
+}
+
+.performance-track {
+    height: 6px;
+
+    overflow: hidden;
+
+    border-radius: 999px;
+
+    background:
+        #eef2f7;
+}
+
+.performance-bar {
+    height: 100%;
+
+    border-radius: inherit;
+
+    background:
+        var(--gradient-ai);
+}
+
+.performance-score {
+    font-size: 9px;
+
+    font-weight:
+        var(--font-semibold);
+
+    text-align: right;
+
+    color:
+        var(--color-text-secondary);
+}
+
+
+/* ========================================
+   AI INSIGHT
+   ======================================== */
+
+.ai-insight {
+    padding: 14px;
+
+    border:
+        1px solid
+        rgba(99, 102, 241, 0.16);
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(99, 102, 241, 0.06),
+            rgba(139, 92, 246, 0.03)
+        );
+}
+
+.ai-insight-label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    font-size: 9px;
+
+    font-weight:
+        var(--font-semibold);
+
+    color:
+        var(--color-primary);
+}
+
+.ai-insight-icon {
+    width: 18px;
+    height: 18px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 5px;
+
+    background:
+        rgba(99, 102, 241, 0.12);
+
+    font-size: 9px;
+}
+
+.ai-insight-title {
+    margin-top: 12px;
+
+    font-size: 12px;
+
+    line-height: 1.4;
+
+    font-weight:
+        var(--font-semibold);
+
+    color:
+        var(--color-text-primary);
+}
+
+.ai-insight-text {
+    margin-top: 6px;
+
+    font-size: 9px;
+
+    line-height: 1.5;
+
+    color:
+        var(--color-text-secondary);
+}
+
+
+/* ========================================
+   FLOATING AI BADGE
+   ======================================== */
+
+.hero-floating-badge {
+    position: absolute;
+
+    z-index: 2;
+
+    right: -25px;
+    top: 80px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding:
+        10px
+        13px;
+
+    border:
+        1px solid
+        rgba(99, 102, 241, 0.16);
+
+    border-radius: 10px;
+
+    background:
+        rgba(255, 255, 255, 0.92);
+
+    box-shadow:
+        0 12px 30px
+        rgba(15, 23, 42, 0.10);
+
+    backdrop-filter: blur(10px);
+
+    animation:
+        hero-float 5s ease-in-out infinite;
+}
+
+.hero-floating-icon {
+    width: 26px;
+    height: 26px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 7px;
+
+    background:
+        rgba(99, 102, 241, 0.10);
+
+    color:
+        var(--color-primary);
+
+    font-size: 12px;
+}
+
+.hero-floating-text strong {
+    display: block;
+
+    font-size: 10px;
+
+    color:
+        var(--color-text-primary);
+}
+
+.hero-floating-text span {
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 8px;
+
+    color:
+        var(--color-text-muted);
+}
+
+
+/* ========================================
+   FLOATING ANIMATION
+   ======================================== */
+
+@keyframes hero-float {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-8px);
+    }
+}
