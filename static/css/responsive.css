@@ -159,7 +159,7 @@
     .hero-label {
         margin-bottom: 18px;
 
-        font-size: 9px;
+        font-size: 11px;
     }
 
 
@@ -178,7 +178,7 @@
     .hero-description {
         margin-top: 22px;
 
-        font-size: 15px;
+        font-size: 17px;
 
         line-height: 1.65;
     }
@@ -241,7 +241,7 @@
 
 
     .dashboard-heading h3 {
-        font-size: 15px;
+        font-size: 17px;
     }
 
 
@@ -264,7 +264,7 @@
 
 
     .dashboard-stat-value {
-        font-size: 18px;
+        font-size: 20px;
     }
 
 
@@ -300,7 +300,7 @@
 
 
     .hero-description {
-        font-size: 14px;
+        font-size: 16px;
     }
 
 
@@ -328,7 +328,7 @@
 
 
     .performance-topic {
-        font-size: 8px;
+        font-size: 11px;
     }
 
 }

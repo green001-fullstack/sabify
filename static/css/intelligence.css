@@ -235,7 +235,7 @@
     color:
         var(--color-primary);
 
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .intelligence-copy h3 {
@@ -317,7 +317,7 @@
         #16a34a;
 
     font-size:
-        10px;
+        12px;
 }
 
 .intelligence-feature-text {
@@ -423,12 +423,12 @@
         var(--color-primary);
 
     font-size:
-        11px;
+        13px;
 }
 
 .visual-heading strong {
     font-size:
-        11px;
+        13px;
 
     color:
         var(--color-text-primary);
@@ -436,7 +436,7 @@
 
 .visual-heading span {
     font-size:
-        9px;
+        11px;
 
     color:
         var(--color-text-muted);
@@ -474,7 +474,7 @@
 
 .visual-stat-label {
     font-size:
-        8px;
+        11px;
 
     color:
         var(--color-text-muted);
@@ -485,7 +485,7 @@
         5px;
 
     font-size:
-        17px;
+        19px;
 
     font-weight:
         var(--font-bold);
@@ -516,7 +516,7 @@
 
 .learning-gap-label {
     font-size:
-        8px;
+        11px;
 
     font-weight:
         var(--font-semibold);
@@ -536,7 +536,7 @@
         6px;
 
     font-size:
-        12px;
+        14px;
 
     font-weight:
         var(--font-semibold);
@@ -550,7 +550,7 @@
         4px;
 
     font-size:
-        9px;
+        11px;
 
     line-height:
         1.45;
@@ -587,7 +587,7 @@
         12px;
 
     font-size:
-        9px;
+        11px;
 
     font-weight:
         var(--font-semibold);
@@ -695,7 +695,7 @@
         white;
 
     font-size:
-        14px;
+        16px;
 }
 
 .coach-header strong {
@@ -703,7 +703,7 @@
         block;
 
     font-size:
-        11px;
+        13px;
 
     color:
         var(--color-text-primary);
@@ -717,7 +717,7 @@
         2px;
 
     font-size:
-        8px;
+        11px;
 
     color:
         var(--color-text-muted);
@@ -740,7 +740,7 @@
         12px;
 
     font-size:
-        10px;
+        12px;
 
     line-height:
         1.55;
@@ -794,7 +794,7 @@
 
 .practice-label {
     font-size:
-        8px;
+        11px;
 
     font-weight:
         var(--font-semibold);
@@ -814,7 +814,7 @@
         7px;
 
     font-size:
-        10px;
+        12px;
 
     font-weight:
         var(--font-semibold);
@@ -853,7 +853,7 @@
         7px;
 
     font-size:
-        8px;
+        11px;
 
     color:
         var(--color-text-secondary);
