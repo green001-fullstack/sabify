@@ -407,7 +407,7 @@
 
     gap: 8px;
 
-    font-size: 12px;
+    font-size: 14px;
     font-weight: var(--font-semibold);
 
     color: var(--color-text-primary);
@@ -428,7 +428,7 @@
 
     color: white;
 
-    font-size: 9px;
+    font-size: 11px;
     font-weight: 800;
 }
 
@@ -483,7 +483,7 @@
         10px
         8px;
 
-    font-size: 9px;
+    font-size: 11px;
     font-weight: var(--font-semibold);
 
     text-transform: uppercase;
@@ -512,7 +512,7 @@
     color:
         var(--color-text-secondary);
 
-    font-size: 11px;
+    font-size: 13px;
     font-weight: var(--font-medium);
 }
 
@@ -549,7 +549,7 @@
 .dashboard-heading h3 {
     margin: 0;
 
-    font-size: 18px;
+    font-size: 20px;
 
     letter-spacing: -0.025em;
 
@@ -560,7 +560,7 @@
 .dashboard-heading p {
     margin-top: 4px;
 
-    font-size: 10px;
+    font-size: 12px;
 
     color:
         var(--color-text-muted);
@@ -594,7 +594,7 @@
 }
 
 .dashboard-stat-label {
-    font-size: 9px;
+    font-size: 11px;
 
     color:
         var(--color-text-muted);
@@ -603,7 +603,7 @@
 .dashboard-stat-value {
     margin-top: 7px;
 
-    font-size: 22px;
+    font-size: 24px;
     font-weight: var(--font-bold);
 
     letter-spacing: -0.04em;
@@ -615,7 +615,7 @@
 .dashboard-stat-change {
     margin-top: 4px;
 
-    font-size: 9px;
+    font-size: 11px;
 
     color:
         #16a34a;
@@ -661,7 +661,7 @@
 }
 
 .dashboard-panel-title {
-    font-size: 11px;
+    font-size: 13px;
 
     font-weight:
         var(--font-semibold);
@@ -671,7 +671,7 @@
 }
 
 .dashboard-panel-meta {
-    font-size: 9px;
+    font-size: 11px;
 
     color:
         var(--color-text-muted);
@@ -702,7 +702,7 @@
 
     text-overflow: ellipsis;
 
-    font-size: 9px;
+    font-size: 11px;
 
     color:
         var(--color-text-secondary);
@@ -729,7 +729,7 @@
 }
 
 .performance-score {
-    font-size: 9px;
+    font-size: 11px;
 
     font-weight:
         var(--font-semibold);
@@ -769,7 +769,7 @@
 
     gap: 6px;
 
-    font-size: 9px;
+    font-size: 11px;
 
     font-weight:
         var(--font-semibold);
@@ -791,13 +791,13 @@
     background:
         rgba(99, 102, 241, 0.12);
 
-    font-size: 9px;
+    font-size: 11px;
 }
 
 .ai-insight-title {
     margin-top: 12px;
 
-    font-size: 12px;
+    font-size: 14px;
 
     line-height: 1.4;
 
@@ -811,7 +811,7 @@
 .ai-insight-text {
     margin-top: 6px;
 
-    font-size: 9px;
+    font-size: 11px;
 
     line-height: 1.5;
 
@@ -877,13 +877,13 @@
     color:
         var(--color-primary);
 
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .hero-floating-text strong {
     display: block;
 
-    font-size: 10px;
+    font-size: 12px;
 
     color:
         var(--color-text-primary);
@@ -894,7 +894,7 @@
 
     margin-top: 2px;
 
-    font-size: 8px;
+    font-size: 11px;
 
     color:
         var(--color-text-muted);
