@@ -7,6 +7,7 @@ import (
 
 	"sabify/internal/handlers"
 )
+
 func SetupRouter(
 	homeHandler *handlers.HomeHandler,
 	authHandler *handlers.AuthHandler,
