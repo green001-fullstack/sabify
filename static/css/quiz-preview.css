@@ -55,7 +55,7 @@
     content: "✦";
 
     font-size:
-        10px;
+        12px;
 }
 
 .quiz-preview-title {
@@ -161,7 +161,7 @@
 
 .builder-header-label {
     font-size:
-        9px;
+        11px;
 
     font-weight:
         var(--font-semibold);
@@ -208,7 +208,7 @@
         7px;
 
     font-size:
-        10px;
+        12px;
 
     font-weight:
         var(--font-semibold);
@@ -238,7 +238,7 @@
         inherit;
 
     font-size:
-        11px;
+        13px;
 
     color:
         var(--color-text-primary);
@@ -302,7 +302,7 @@
         inherit;
 
     font-size:
-        11px;
+        13px;
 
     color:
         var(--color-text-primary);
@@ -355,7 +355,7 @@
         inherit;
 
     font-size:
-        11px;
+        13px;
 
     font-weight:
         var(--font-semibold);
@@ -450,7 +450,7 @@
         white;
 
     font-size:
-        13px;
+        15px;
 
     box-shadow:
         0 5px 15px
@@ -462,7 +462,7 @@
         block;
 
     font-size:
-        12px;
+        14px;
 
     color:
         var(--color-text-primary);
@@ -476,7 +476,7 @@
         2px;
 
     font-size:
-        8px;
+        11px;
 
     color:
         var(--color-text-muted);
@@ -505,7 +505,7 @@
         #15803d;
 
     font-size:
-        8px;
+        11px;
 
     font-weight:
         var(--font-semibold);
@@ -577,7 +577,7 @@
         6px;
 
     font-size:
-        9px;
+        11px;
 
     font-weight:
         var(--font-semibold);
@@ -622,7 +622,7 @@
         #f8fafc;
 
     font-size:
-        7px;
+        10px;
 
     color:
         var(--color-text-muted);
@@ -727,7 +727,7 @@
         6px;
 
     font-size:
-        9px;
+        11px;
 
     font-weight:
         var(--font-semibold);
@@ -749,7 +749,7 @@
 
 .option-text {
     font-size:
-        10px;
+        12px;
 
     color:
         var(--color-text-secondary);
@@ -791,7 +791,7 @@
         4px;
 
     font-size:
-        8px;
+        11px;
 
     font-weight:
         var(--font-semibold);
@@ -805,7 +805,7 @@
         0;
 
     font-size:
-        9px;
+        11px;
 
     line-height:
         1.5;
@@ -844,7 +844,7 @@
         6px;
 
     font-size:
-        8px;
+        11px;
 
     color:
         var(--color-text-muted);
@@ -868,7 +868,7 @@
         inherit;
 
     font-size:
-        8px;
+        11px;
 
     font-weight:
         var(--font-semibold);

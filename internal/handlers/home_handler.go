@@ -11,7 +11,7 @@ type HomeHandler struct {
 
 func NewHomeHandler() *HomeHandler {
 	tmpl := template.Must(
-		template.ParseFiles("templates/layouts/index.html"),
+		template.ParseFiles("templates/layouts/base.html", "templates/layouts/public.html", "templates/pages/home/index.html"),
 	)
 
 	return &HomeHandler{
@@ -25,7 +25,7 @@ func (h *HomeHandler) Home(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	err := h.template.Execute(w, nil)
+	err := h.template.ExecuteTemplate(w, "base", nil)
 	if err != nil {
 		http.Error(w, "Unable to load homepage", http.StatusInternalServerError)
 	}

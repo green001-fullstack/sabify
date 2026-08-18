@@ -187,7 +187,7 @@
         white;
 
     font-size:
-        13px;
+        15px;
 
     font-weight:
         var(--font-bold);
@@ -202,7 +202,7 @@
         block;
 
     font-size:
-        12px;
+        14px;
 
     color:
         var(--color-text-primary);
@@ -216,7 +216,7 @@
         3px;
 
     font-size:
-        8px;
+        11px;
 
     color:
         var(--color-text-muted);
@@ -234,7 +234,7 @@
 
 .profile-course-label {
     font-size:
-        8px;
+        11px;
 
     font-weight:
         var(--font-semibold);
@@ -286,7 +286,7 @@
 
 .profile-progress-header span {
     font-size:
-        9px;
+        11px;
 
     color:
         var(--color-text-muted);
@@ -294,7 +294,7 @@
 
 .profile-progress-header strong {
     font-size:
-        9px;
+        11px;
 
     color:
         var(--color-text-primary);
@@ -358,7 +358,7 @@
         10px;
 
     font-size:
-        9px;
+        11px;
 
     font-weight:
         var(--font-semibold);
@@ -389,7 +389,7 @@
         6px;
 
     font-size:
-        8px;
+        11px;
 
     font-weight:
         var(--font-medium);
@@ -466,7 +466,7 @@
         var(--color-primary);
 
     font-size:
-        9px;
+        11px;
 }
 
 .profile-ai-note p {
@@ -474,7 +474,7 @@
         0;
 
     font-size:
-        8px;
+        11px;
 
     line-height:
         1.55;
@@ -519,7 +519,7 @@
         6px;
 
     font-size:
-        8px;
+        11px;
 
     font-weight:
         var(--font-semibold);
@@ -572,7 +572,7 @@
         rgba(99, 102, 241, 0.05);
 
     font-size:
-        8px;
+        11px;
 
     font-weight:
         var(--font-semibold);
@@ -717,7 +717,7 @@
         #e2e8f0;
 
     font-size:
-        7px;
+        10px;
 }
 
 .roadmap-item.completed
@@ -756,7 +756,7 @@
         5px;
 
     font-size:
-        8px;
+        11px;
 
     font-weight:
         var(--font-semibold);
@@ -776,7 +776,7 @@
         0;
 
     font-size:
-        12px;
+        14px;
 
     color:
         var(--color-text-primary);
@@ -790,7 +790,7 @@
         5px 0 0;
 
     font-size:
-        9px;
+        11px;
 
     line-height:
         1.5;
@@ -836,7 +836,7 @@
         6px;
 
     font-size:
-        8px;
+        11px;
 
     font-weight:
         var(--font-semibold);
@@ -850,7 +850,7 @@
         0;
 
     font-size:
-        9px;
+        11px;
 
     line-height:
         1.5;

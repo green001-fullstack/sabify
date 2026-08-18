@@ -125,7 +125,7 @@
 
     color: var(--color-primary);
 
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .study-match-copy h3 {
@@ -197,7 +197,7 @@
 
     color: #16a34a;
 
-    font-size: 10px;
+    font-size: 12px;
 }
 
 
@@ -309,7 +309,7 @@
 
     color: var(--color-primary);
 
-    font-size: 10px;
+    font-size: 12px;
 
     font-weight: var(--font-bold);
 }
@@ -317,7 +317,7 @@
 .student-card-header strong {
     display: block;
 
-    font-size: 10px;
+    font-size: 12px;
 
     color: var(--color-text-primary);
 }
@@ -327,7 +327,7 @@
 
     margin-top: 2px;
 
-    font-size: 7px;
+    font-size: 10px;
 
     color: var(--color-text-muted);
 }
@@ -340,7 +340,7 @@
 .student-card-label {
     margin-bottom: 7px;
 
-    font-size: 7px;
+    font-size: 10px;
 
     font-weight: var(--font-semibold);
 
@@ -364,7 +364,7 @@
 
     border-radius: 5px;
 
-    font-size: 7px;
+    font-size: 10px;
 }
 
 .student-topic.strong {
@@ -432,7 +432,7 @@
 
     color: white;
 
-    font-size: 12px;
+    font-size: 14px;
 
     box-shadow:
         0 5px 15px
@@ -440,7 +440,7 @@
 }
 
 .match-center strong {
-    font-size: 8px;
+    font-size: 11px;
 
     color: var(--color-text-primary);
 }
@@ -448,7 +448,7 @@
 .match-center span {
     margin-top: 2px;
 
-    font-size: 7px;
+    font-size: 10px;
 
     color: var(--color-primary);
 }
@@ -529,13 +529,13 @@
 }
 
 .compatibility-label {
-    font-size: 7px;
+    font-size: 10px;
 
     color: var(--color-text-muted);
 }
 
 .compatibility-score {
-    font-size: 9px;
+    font-size: 11px;
 
     font-weight: var(--font-bold);
 
