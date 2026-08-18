@@ -1,0 +1,292 @@
+/* ========================================
+   FINAL CTA
+   ======================================== */
+
+.final-cta {
+    position: relative;
+
+    padding: 110px 0;
+
+    overflow: hidden;
+
+    background: var(--color-background);
+}
+
+
+/* ========================================
+   CTA CONTAINER
+   ======================================== */
+
+.final-cta-card {
+    position: relative;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 80px 50px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #111827,
+            #1e1b4b
+        );
+
+    box-shadow:
+        0 30px 80px
+        rgba(15, 23, 42, 0.16);
+}
+
+
+/* ========================================
+   DECORATIVE GLOW
+   ======================================== */
+
+.final-cta-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    top: -250px;
+    right: -120px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(99, 102, 241, 0.22);
+
+    filter: blur(80px);
+
+    pointer-events: none;
+}
+
+.final-cta-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    bottom: -250px;
+    left: -100px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(139, 92, 246, 0.16);
+
+    filter: blur(80px);
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   CONTENT
+   ======================================== */
+
+.final-cta-content {
+    position: relative;
+
+    z-index: 2;
+}
+
+.final-cta-label {
+    margin-bottom: 18px;
+
+    font-size: 11px;
+
+    font-weight: var(--font-semibold);
+
+    letter-spacing: 0.1em;
+
+    text-transform: uppercase;
+
+    color: #a5b4fc;
+}
+
+.final-cta-title {
+    max-width: 750px;
+
+    margin: 0 auto;
+
+    font-size:
+        clamp(
+            2.3rem,
+            5vw,
+            4rem
+        );
+
+    line-height: 1.02;
+
+    letter-spacing: -0.05em;
+
+    font-weight: var(--font-extrabold);
+
+    color: white;
+}
+
+.final-cta-description {
+    max-width: 580px;
+
+    margin: 20px auto 0;
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+
+    color: #cbd5e1;
+}
+
+
+/* ========================================
+   BUTTONS
+   ======================================== */
+
+.final-cta-actions {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 32px;
+}
+
+.final-cta-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    min-height: 46px;
+
+    padding:
+        0 20px;
+
+    border-radius: 9px;
+
+    font-size: 0.85rem;
+
+    font-weight: var(--font-semibold);
+
+    text-decoration: none;
+
+    transition:
+        transform 180ms ease,
+        box-shadow 180ms ease,
+        background 180ms ease;
+}
+
+.final-cta-button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* Primary */
+
+.final-cta-button.primary {
+    background: white;
+
+    color: #111827;
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, 0.15);
+}
+
+.final-cta-button.primary:hover {
+    box-shadow:
+        0 15px 30px
+        rgba(0, 0, 0, 0.22);
+}
+
+
+/* Secondary */
+
+.final-cta-button.secondary {
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.18);
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+    color: white;
+
+    backdrop-filter:
+        blur(10px);
+}
+
+.final-cta-button.secondary:hover {
+    background:
+        rgba(255, 255, 255, 0.10);
+}
+
+
+/* ========================================
+   CTA NOTE
+   ======================================== */
+
+.final-cta-note {
+    margin-top: 20px;
+
+    font-size: 8px;
+
+    color: #94a3b8;
+}
+
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 767px) {
+
+    .final-cta {
+        padding: 75px 0;
+    }
+
+    .final-cta-card {
+        padding: 60px 24px;
+
+        border-radius: 18px;
+    }
+
+    .final-cta-title {
+        font-size: 2.3rem;
+    }
+
+    .final-cta-description {
+        font-size: 0.9rem;
+    }
+
+    .final-cta-actions {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .final-cta-button {
+        width: 100%;
+
+        max-width: 280px;
+    }
+
+}
