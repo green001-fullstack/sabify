@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href=".../static/css/register.css">
+</head>
+<body>
+    <div>
+        <div>
+            <img src="" alt="logo">
+            <h3></h3>
+        </div>
+        <h2>Create Your Account</h2>
+        <p>Sign in to access your learning dashboard and AI tutor</p>
+        <form action="" method="post">
+            <label for="signInAs">Sign in as</label>
+            <select name="signInAs" id="signInAs">
+                <option value="student">Student</option>
+                <option value="teacher">Teacher</option>
+            </select>
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName"/>
+            <label for="email">Email</label>
+            <input type="text" id="email"/>
+            <div>
+                <label for="password">Password</label>
+                <input type="text" id="password"/>
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="text" id="confirmPassword"/>
+            </div>
+            <input type="checkbox" id="policy"/>
+            <label for="policy">I agree to the Institutional Terms of Service, Academic Honor Code, Privacy Policy.</label>
+            <button type="submit">Create Account</button>
+        </form>
+        <p>Already have an account? <span><a href="../auth/login.html">Sign in</a></span></p>
+    </div>
+</body>
+</html>
