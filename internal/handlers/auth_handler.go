@@ -1,6 +1,7 @@
 package handlers
 
 import (
+	"html/template"
 	"net/http"
 
 	"sabify/internal/services"
@@ -18,7 +19,19 @@ func NewAuthHandler(authService *services.AuthService) *AuthHandler {
 
 // GET /register
 func (h *AuthHandler) ShowRegister(w http.ResponseWriter, r *http.Request) {
-	http.Error(w, "Register page coming soon", http.StatusNotImplemented)
+	// http.Error(w, "Register page coming soon", http.StatusNotImplemented)
+	tmpl := template.Must(
+		template.ParseFiles("templates/auth/register.html", "templates/auth/login.html"),
+	)
+	if r.URL.Path != "/register" {
+		http.NotFound(w, r)
+		return
+	}
+
+	err := tmpl.ExecuteTemplate(w, "register.html", nil)
+	if err != nil {
+		http.Error(w, "Unable to load register page", http.StatusInternalServerError)
+	}
 }
 
 // POST /register
