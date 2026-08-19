@@ -1,0 +1,69 @@
+{{ define "base" }}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="{{ if .Description }}{{ .Description }}{{ else }}AI-powered learning intelligence for teachers and students.{{ end }}">
+
+    <title>
+        {{ if .Title }}
+        {{ .Title }} — Learning Intelligence
+        {{ else }}
+        Learning Intelligence
+        {{ end }}
+    </title>
+
+    <link rel="stylesheet" href="/static/css/variables.css">
+
+    <link rel="stylesheet" href="/static/css/reset.css">
+
+    <link rel="stylesheet" href="/static/css/typography.css">
+    <link rel="stylesheet" href="/static/css/layout.css">
+
+    <link rel="stylesheet" href="/static/css/navbar.css">
+
+    <link rel="stylesheet" href="/static/css/hero.css">
+
+    <link rel="stylesheet" href="/static/css/animations.css">
+
+    <link rel="stylesheet" href="/static/css/learning-loop.css">
+    <link rel="stylesheet" href="/static/css/intelligence.css">
+
+    <link rel="stylesheet" href="/static/css/quiz-preview.css">
+
+    <link rel="stylesheet" href="/static/css/personalised.css">
+
+    <link rel="stylesheet" href="/static/css/responsive.css">
+
+    <link rel="stylesheet" href="/static/css/cta.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+
+    <link rel="stylesheet" href="/static/css/study-group.css">
+
+    {{ block "styles" . }}{{ end }}
+
+</head>
+
+<body>
+
+    {{ block "body" . }}{{ end }}
+    <script src="/static/js/navbar.js"></script>
+    <script src="/static/js/animation.js"></script>
+    <script src="/static/js/intelligence.js"></script>
+    <script src="/static/js/quiz-preview.js"></script>
+
+
+    {{ block "scripts" . }}{{ end }}
+
+</body>
+
+</html>
+
+{{ end }}

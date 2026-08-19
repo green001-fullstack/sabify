@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-18T00:00:00Z",
+  "title": "Design System: SABIFY",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Indigo 600",
+        "canonical": "#4f46e5",
+        "tonalRamp": ["#312e81", "#3730a3", "#4338ca", "#4f46e5", "#6366f1", "#818cf8", "#a5b4fc", "#c7d2fe"]
+      },
+      "primary-deep": {
+        "role": "primary",
+        "displayName": "Indigo 800",
+        "canonical": "#3730a3"
+      },
+      "primary-wash": {
+        "role": "primary",
+        "displayName": "Indigo 50",
+        "canonical": "#eef2ff"
+      },
+      "ai": {
+        "role": "secondary",
+        "displayName": "Violet 600",
+        "canonical": "#7c3aed",
+        "tonalRamp": ["#4c1d95", "#5b21b6", "#6d28d9", "#7c3aed", "#8b5cf6", "#a78bfa", "#c4b5fd", "#ddd6fe"]
+      },
+      "ai-deep": {
+        "role": "secondary",
+        "displayName": "Indigo 600 (AI gradient start)",
+        "canonical": "#4f46e5"
+      },
+      "ai-wash": {
+        "role": "secondary",
+        "displayName": "Violet 50",
+        "canonical": "#f5f3ff"
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Slate 900",
+        "canonical": "#0f172a"
+      },
+      "text-secondary": {
+        "role": "neutral",
+        "displayName": "Slate 600",
+        "canonical": "#475569"
+      },
+      "text-muted": {
+        "role": "neutral",
+        "displayName": "Slate 500",
+        "canonical": "#64748b"
+      },
+      "text-light": {
+        "role": "neutral",
+        "displayName": "Slate 400",
+        "canonical": "#94a3b8"
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Slate 200",
+        "canonical": "#e2e8f0"
+      },
+      "border-subtle": {
+        "role": "neutral",
+        "displayName": "Slate 100",
+        "canonical": "#f1f5f9"
+      },
+      "canvas": {
+        "role": "neutral",
+        "displayName": "Slate 50",
+        "canonical": "#f8fafc"
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "White",
+        "canonical": "#ffffff"
+      },
+      "success": {
+        "role": "feedback",
+        "displayName": "Green 600",
+        "canonical": "#16a34a"
+      },
+      "warning": {
+        "role": "feedback",
+        "displayName": "Amber 500",
+        "canonical": "#f59e0b"
+      },
+      "danger": {
+        "role": "feedback",
+        "displayName": "Red 600",
+        "canonical": "#dc2626"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headlines only. Dramatic scale with clamp()."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings (h1/h2). Bold, tight."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Card titles, feature headings (h3)."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Paragraphs, descriptions. Max-width 70ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Section labels, badges, metadata. Uppercase, small."
+      }
+    },
+    "shadows": [
+      { "name": "subtle-lift", "value": "0 2px 8px rgba(15,23,42,0.04)", "purpose": "Dropdowns, small floating elements." },
+      { "name": "card", "value": "0 8px 24px rgba(15,23,42,0.08)", "purpose": "Cards, floating badges, default elevation." },
+      { "name": "hero-preview", "value": "0 30px 80px rgba(15,23,42,0.12), 0 8px 30px rgba(15,23,42,0.05)", "purpose": "Dashboard preview in hero. Dual shadow for depth + glow." },
+      { "name": "modal", "value": "0 24px 60px rgba(15,23,42,0.12)", "purpose": "Modal overlays, highest structural elevation." },
+      { "name": "cta-glow", "value": "0 8px 25px rgba(79,70,229,0.22)", "purpose": "Primary CTA buttons at rest." },
+      { "name": "cta-glow-hover", "value": "0 12px 30px rgba(79,70,229,0.30)", "purpose": "Primary CTA buttons on hover." }
+    ],
+    "motion": [
+      { "name": "fade-up", "value": "opacity 600ms ease, transform 600ms ease", "purpose": "Scroll reveal. translateY(24px) to 0." },
+      { "name": "fade-in", "value": "opacity 600ms ease", "purpose": "Simple opacity reveal." },
+      { "name": "float", "value": "translateY(0) to translateY(-8px), 5s ease-in-out infinite", "purpose": "Hero floating badge, continuous gentle bob." },
+      { "name": "button-hover", "value": "transform 200ms ease, box-shadow 200ms ease", "purpose": "Button translateY(-2px) + shadow increase on hover." },
+      { "name": "nav-transition", "value": "color 250ms ease, background 250ms ease", "purpose": "Nav link color and background on hover." },
+      { "name": "mobile-menu", "value": "max-height 350ms ease, opacity 250ms ease", "purpose": "Mobile nav slide-down open/close." }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "480px" },
+      { "name": "tablet", "value": "768px" },
+      { "name": "desktop", "value": "1024px" },
+      { "name": "wide", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main CTA. Indigo-to-violet gradient, white text, hover lifts with shadow.",
+      "html": "<button class=\"ds-btn-primary\">Get Started <span class=\"ds-btn-arrow\">→</span></button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 10px; height: 50px; padding: 0 22px; border-radius: 12px; background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%); color: #fff; font-family: Inter, sans-serif; font-size: 0.875rem; font-weight: 600; border: none; cursor: pointer; box-shadow: 0 8px 25px rgba(79,70,229,0.22); transition: transform 200ms ease, box-shadow 200ms ease; } .ds-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(79,70,229,0.30); } .ds-btn-primary:focus-visible { outline: 2px solid #4f46e5; outline-offset: 2px; } .ds-btn-arrow { transition: transform 200ms ease; } .ds-btn-primary:hover .ds-btn-arrow { transform: translateX(4px); }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Alternate CTA. Semi-transparent white, slate border, hover gains indigo tint.",
+      "html": "<button class=\"ds-btn-secondary\">Learn More</button>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; gap: 9px; height: 50px; padding: 0 20px; border-radius: 12px; background: rgba(255,255,255,0.75); color: #0f172a; font-family: Inter, sans-serif; font-size: 0.875rem; font-weight: 600; border: 1px solid #e2e8f0; cursor: pointer; transition: border-color 200ms ease, background 200ms ease, transform 200ms ease; } .ds-btn-secondary:hover { transform: translateY(-2px); border-color: rgba(99,102,241,0.30); background: rgba(99,102,241,0.04); } .ds-btn-secondary:focus-visible { outline: 2px solid #4f46e5; outline-offset: 2px; }"
+    },
+    {
+      "name": "Nav Link",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Center navigation link. Transparent, medium weight, hover washes indigo.",
+      "html": "<a class=\"ds-nav-link\" href=\"#\">Courses</a>",
+      "css": ".ds-nav-link { display: inline-flex; align-items: center; padding: 8px 12px; border-radius: 8px; font-family: Inter, sans-serif; font-size: 0.875rem; font-weight: 500; color: #475569; text-decoration: none; transition: color 250ms ease, background 250ms ease; } .ds-nav-link:hover { color: #0f172a; background: #eef2ff; } .ds-nav-link:focus-visible { outline: 2px solid #4f46e5; outline-offset: 2px; }"
+    },
+    {
+      "name": "Stat Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Dashboard stat card. White surface, subtle border, bold value.",
+      "html": "<div class=\"ds-stat-card\"><span class=\"ds-stat-label\">Active Students</span><span class=\"ds-stat-value\">248</span><span class=\"ds-stat-change\">+12% this week</span></div>",
+      "css": ".ds-stat-card { padding: 16px; border: 1px solid #f1f5f9; border-radius: 12px; background: #ffffff; } .ds-stat-label { display: block; font-family: Inter, sans-serif; font-size: 11px; color: #64748b; } .ds-stat-value { display: block; margin-top: 7px; font-family: Inter, sans-serif; font-size: 24px; font-weight: 700; letter-spacing: -0.04em; color: #0f172a; } .ds-stat-change { display: block; margin-top: 4px; font-family: Inter, sans-serif; font-size: 11px; color: #16a34a; }"
+    },
+    {
+      "name": "Hero Label",
+      "kind": "chip",
+      "refersTo": "badge",
+      "description": "Pill badge above hero title. Indigo wash background, dot indicator with ring glow.",
+      "html": "<span class=\"ds-hero-label\"><span class=\"ds-hero-label-dot\"></span>AI-Powered Learning</span>",
+      "css": ".ds-hero-label { display: inline-flex; align-items: center; gap: 8px; padding: 7px 12px; border: 1px solid rgba(99,102,241,0.18); border-radius: 9999px; background: rgba(99,102,241,0.06); color: #4f46e5; font-family: Inter, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; } .ds-hero-label-dot { width: 7px; height: 7px; border-radius: 50%; background: #4f46e5; box-shadow: 0 0 0 4px rgba(99,102,241,0.10); }"
+    },
+    {
+      "name": "AI Insight Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Gradient-tinted card for AI-generated insights. Violet border, gradient background.",
+      "html": "<div class=\"ds-ai-card\"><span class=\"ds-ai-label\">✨ AI Insight</span><span class=\"ds-ai-title\">Students struggle most with quadratic equations</span><span class=\"ds-ai-text\">Consider adding a visual walkthrough before the next quiz.</span></div>",
+      "css": ".ds-ai-card { padding: 14px; border: 1px solid rgba(99,102,241,0.16); border-radius: 10px; background: linear-gradient(135deg, rgba(99,102,241,0.06), rgba(139,92,246,0.03)); } .ds-ai-label { display: flex; align-items: center; gap: 6px; font-family: Inter, sans-serif; font-size: 11px; font-weight: 600; color: #4f46e5; } .ds-ai-title { display: block; margin-top: 12px; font-family: Inter, sans-serif; font-size: 14px; line-height: 1.4; font-weight: 600; color: #0f172a; } .ds-ai-text { display: block; margin-top: 6px; font-family: Inter, sans-serif; font-size: 11px; line-height: 1.5; color: #475569; }"
+    },
+    {
+      "name": "Performance Bar",
+      "kind": "custom",
+      "refersTo": "card",
+      "description": "Horizontal progress indicator. Gradient fill on pill track, topic label + score.",
+      "html": "<div class=\"ds-perf-bar\"><span class=\"ds-perf-topic\">Algebra</span><div class=\"ds-perf-track\"><div class=\"ds-perf-fill\" style=\"width: 78%\"></div></div><span class=\"ds-perf-score\">78%</span></div>",
+      "css": ".ds-perf-bar { display: grid; grid-template-columns: 110px 1fr 35px; align-items: center; gap: 10px; } .ds-perf-topic { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Inter, sans-serif; font-size: 11px; color: #475569; } .ds-perf-track { height: 6px; overflow: hidden; border-radius: 9999px; background: #eef2f7; } .ds-perf-fill { height: 100%; border-radius: inherit; background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%); transition: width 600ms ease; } .ds-perf-score { font-family: Inter, sans-serif; font-size: 11px; font-weight: 600; text-align: right; color: #475569; }"
+    },
+    {
+      "name": "Glassmorphic Navbar",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Sticky top navbar. Frosted glass effect with backdrop blur.",
+      "html": "<header class=\"ds-navbar\"><div class=\"ds-navbar-inner\"><div class=\"ds-navbar-brand\"><div class=\"ds-brand-mark\"><span></span><span></span><span></span><span></span></div><span class=\"ds-brand-name\">SABIFY</span></div><nav class=\"ds-navbar-center\"><a class=\"ds-nav-link\" href=\"#\">Courses</a><a class=\"ds-nav-link\" href=\"#\">Dashboard</a><a class=\"ds-nav-link\" href=\"#\">AI Tutor</a></nav><div class=\"ds-navbar-actions\"><a class=\"ds-nav-login\" href=\"#\">Log in</a><a class=\"ds-nav-cta\" href=\"#\">Get Started →</a></div></div></header>",
+      "css": ".ds-navbar { position: sticky; top: 0; z-index: 200; width: 100%; background: rgba(255,255,255,0.88); border-bottom: 1px solid rgba(226,232,240,0.8); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); } .ds-navbar-inner { min-height: 76px; display: flex; align-items: center; gap: 32px; width: min(calc(100% - 64px), 1280px); margin-inline: auto; } .ds-navbar-brand { display: inline-flex; align-items: center; gap: 10px; flex-shrink: 0; } .ds-brand-mark { width: 34px; height: 34px; display: grid; grid-template-columns: 1fr 1fr; gap: 3px; padding: 7px; border-radius: 10px; background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%); box-shadow: 0 4px 12px rgba(79,70,229,0.25); } .ds-brand-mark span { border-radius: 50%; background: white; opacity: 0.95; } .ds-brand-name { font-size: 1.125rem; font-weight: 700; letter-spacing: -0.02em; color: #0f172a; } .ds-navbar-center { display: flex; align-items: center; gap: 6px; margin-inline: auto; } .ds-navbar-actions { display: flex; align-items: center; gap: 16px; flex-shrink: 0; } .ds-nav-login { font-size: 0.875rem; font-weight: 600; color: #475569; text-decoration: none; transition: color 250ms ease; } .ds-nav-login:hover { color: #4f46e5; } .ds-nav-cta { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 16px; border-radius: 12px; background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%); color: white; font-size: 0.875rem; font-weight: 600; text-decoration: none; box-shadow: 0 4px 14px rgba(79,70,229,0.2); transition: transform 250ms ease, box-shadow 250ms ease; } .ds-nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 20px rgba(79,70,229,0.28); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Brutalist clarity",
+    "overview": "SABIFY is a two-sided education platform where teachers create and manage courses, quizzes, and assignments, while students engage with AI-personalized learning paths. The design system is built on a single conviction: structure is visible. Grid lines aren't hidden, they're part of the aesthetic. Every element exists because it does something. No decorative frills.\n\nThe palette is electric and vibrant: an indigo-to-violet gradient is the signature accent that appears on every CTA, the brand mark, AI badges, and progress bars. This high-energy gradient sits against a calm, neutral slate base, creating the core tension: professional foundation, electric accents.\n\nThe brand voice is a friendly mentor -- supportive without being patronizing, clear without being cold. Typography uses Inter at a clean weight scale. Motion is purposeful: scroll reveals, hover lifts, floating badges. All animations respect prefers-reduced-motion.",
+    "keyCharacteristics": [
+      "Visible grid structure with generous whitespace (96px section padding)",
+      "Indigo-violet gradient as the single accent signature",
+      "Glassmorphic sticky navbar (backdrop-filter blur 16px, semi-transparent white)",
+      "Dashboard preview hero proving the product is real",
+      "Clean Inter typography with dramatic display scaling",
+      "Consistent border-radius vocabulary: 8px small, 12px cards, 16px panels, pill badges"
+    ],
+    "rules": [
+      { "name": "The Gradient Rule", "body": "The indigo-to-violet gradient is the only gradient in the system. It appears on primary CTAs, the brand mark, AI badges, and progress bars. No other gradient exists. Its rarity is the point.", "section": "colors" },
+      { "name": "The 10% Accent Rule", "body": "The primary accent covers no more than 10% of any given screen. It guides the eye; it doesn't shout.", "section": "colors" },
+      { "name": "The Display Scale Rule", "body": "Hero text uses clamp(3rem, 7vw, 5.5rem) -- it scales fluidly between mobile and desktop. Never set a fixed hero size below 3rem.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "Surfaces are flat at rest. Shadows appear only as a response to state (hover, elevation, focus) or structural hierarchy (hero preview, modals).", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use the indigo-to-violet gradient for all primary CTAs and AI-related badges.",
+      "Do maintain 96px vertical padding between major sections.",
+      "Do use clamp() for hero typography to ensure fluid scaling.",
+      "Do keep the navbar glassmorphic (backdrop-filter blur + semi-transparent white).",
+      "Do use the 8/12/16/20px radius scale consistently.",
+      "Do respect prefers-reduced-motion: reduce -- all animations already handle this."
+    ],
+    "donts": [
+      "Don't add gradients beyond the single indigo-to-violet signature.",
+      "Don't use shadows on flat-at-rest surfaces -- shadows are for hover/elevation only.",
+      "Don't set fixed hero text sizes below 3rem -- always use the clamp() scale.",
+      "Don't use border widths greater than 1px.",
+      "Don't introduce additional font families -- Inter handles all roles through weight variation.",
+      "Don't put more than 10% accent color on any single screen."
+    ]
+  }
+}

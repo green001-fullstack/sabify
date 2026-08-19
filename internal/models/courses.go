@@ -1,0 +1,156 @@
+package models
+
+import (
+	"context"
+	"errors"
+	"time"
+
+	"github.com/jackc/pgx/v5"
+	"github.com/jackc/pgx/v5/pgxpool"
+)
+
+type Course struct {
+	ID          string
+	Title       string
+	Description string
+	TeacherID   string
+	CreatedAt   time.Time
+	UpdatedAt   time.Time
+}
+
+type CourseModel struct {
+	DB *pgxpool.Pool
+}
+
+func (m *CourseModel) Insert(ctx context.Context, course *Course) error {
+	query := `
+		INSERT INTO courses (title, description, teacher_id)
+		VALUES ($1, $2, $3)
+		RETURNING id, created_at, updated_at
+	`
+
+	return m.DB.QueryRow(
+		ctx, query,
+		course.Title, course.Description, course.TeacherID,
+	).Scan(&course.ID, &course.CreatedAt, &course.UpdatedAt)
+}
+
+func (m *CourseModel) FindByID(ctx context.Context, id string) (*Course, error) {
+	var course Course
+
+	query := `
+		SELECT id, title, description, teacher_id, created_at, updated_at
+		FROM courses
+		WHERE id = $1
+	`
+
+	err := m.DB.QueryRow(ctx, query, id).Scan(
+		&course.ID, &course.Title, &course.Description,
+		&course.TeacherID, &course.CreatedAt, &course.UpdatedAt,
+	)
+
+	if errors.Is(err, pgx.ErrNoRows) {
+		return nil, ErrNoRecord
+	} else if err != nil {
+		return nil, err
+	}
+
+	return &course, nil
+}
+
+func (m *CourseModel) FindByTeacher(ctx context.Context, teacherID string) ([]Course, error) {
+	query := `
+		SELECT id, title, description, teacher_id, created_at, updated_at
+		FROM courses
+		WHERE teacher_id = $1
+		ORDER BY created_at DESC
+	`
+
+	rows, err := m.DB.Query(ctx, query, teacherID)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	var courses []Course
+
+	for rows.Next() {
+		var course Course
+		if err := rows.Scan(
+			&course.ID, &course.Title, &course.Description,
+			&course.TeacherID, &course.CreatedAt, &course.UpdatedAt,
+		); err != nil {
+			return nil, err
+		}
+		courses = append(courses, course)
+	}
+
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+
+	return courses, nil
+}
+
+func (m *CourseModel) FindAll(ctx context.Context) ([]Course, error) {
+	query := `
+		SELECT id, title, description, teacher_id, created_at, updated_at
+		FROM courses
+		ORDER BY created_at DESC
+	`
+
+	rows, err := m.DB.Query(ctx, query)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	var courses []Course
+
+	for rows.Next() {
+		var course Course
+		if err := rows.Scan(
+			&course.ID, &course.Title, &course.Description,
+			&course.TeacherID, &course.CreatedAt, &course.UpdatedAt,
+		); err != nil {
+			return nil, err
+		}
+		courses = append(courses, course)
+	}
+
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+
+	return courses, nil
+}
+
+func (m *CourseModel) Update(ctx context.Context, course *Course) error {
+	query := `
+		UPDATE courses
+		SET title = $1, description = $2, updated_at = CURRENT_TIMESTAMP
+		WHERE id = $3
+		RETURNING updated_at
+	`
+
+	return m.DB.QueryRow(
+		ctx, query,
+		course.Title, course.Description, course.ID,
+	).Scan(&course.UpdatedAt)
+}
+
+func (m *CourseModel) Delete(ctx context.Context, id string) error {
+	query := `DELETE FROM courses WHERE id = $1`
+
+	result, err := m.DB.Exec(ctx, query, id)
+	if err != nil {
+		return err
+	}
+
+	rowsAffected := result.RowsAffected()
+	if rowsAffected == 0 {
+		return ErrNoRecord
+	}
+
+	return nil
+}
