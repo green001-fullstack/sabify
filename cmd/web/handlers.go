@@ -68,6 +68,7 @@ func (app *application) register(w http.ResponseWriter, r *http.Request) {
 		data.Form = map[string]string{
 			"name":  name,
 			"email": email,
+			"role":  role,
 		}
 		data.FormErrors = v.GetFieldErrors()
 		app.render(w, http.StatusUnprocessableEntity, "register.html", data)
@@ -86,6 +87,7 @@ func (app *application) register(w http.ResponseWriter, r *http.Request) {
 		data.Form = map[string]string{
 			"name":  name,
 			"email": email,
+			"role":  role,
 		}
 		data.FormErrors = map[string]string{"email": "An account with this email already exists"}
 		app.render(w, http.StatusUnprocessableEntity, "register.html", data)
@@ -169,9 +171,9 @@ func (app *application) logout(w http.ResponseWriter, r *http.Request) {
 
 func (app *application) authenticate(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		userID := app.session.GetInt64(r.Context(), "authenticatedUserID")
+		userID := app.session.GetString(r.Context(), "authenticatedUserID")
 
-		if userID == 0 {
+		if userID == "" {
 			http.Redirect(w, r, "/login", http.StatusSeeOther)
 			return
 		}
