@@ -13,20 +13,20 @@
         </div>
 
         <h3>Create Your Account</h3>
-        <p class="subtitle">Sign in to access your learning dashboard and AI tutor</p>
+        <!-- <p class="subtitle">Sign in to access your learning dashboard and AI tutor</p> -->
 
-        <form action="/register" method="post">
+        <form action="/login" method="post">
             <div class="field-group">
-                <label for="signInAs">Sign in as</label>
-                <select name="signInAs" id="signInAs">
+                <label for="role">Signup as</label>
+                <select name="role" id="role">
                     <option value="student">Student</option>
                     <option value="teacher">Teacher</option>
                 </select>
             </div>
 
             <div class="field-group">
-                <label for="fullName">Full Name</label>
-                <input type="text" id="fullName" name="fullName" placeholder="Full name" required>
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Full name" required>
             </div>
 
             <div class="field-group">
@@ -55,7 +55,7 @@
             <button type="submit">Create Account</button>
         </form>
 
-        <p class="switch">Already have an account? <a href="/login">Sign in</a></p>
+        <p class="switch">Already have an account? <a href="/login">Login</a></p>
     </div>
 </div>
 
