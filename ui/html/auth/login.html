@@ -1,0 +1,32 @@
+{{ define "body" }}
+
+<div class="register-page">
+    <div class="register-container">
+
+        <div class="dashboard-brand">
+            <span class="dashboard-brand-mark">LI</span>
+            Learning Intelligence
+        </div>
+
+        <h3>Login to Your Account</h3>
+        <p class="subtitle">Login to access your learning dashboard and AI tutor</p>
+
+        <form action="/login" method="post">
+            <div class="field-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+
+            <div class="form-row">
+                <div class="field-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="••••••••" required>
+                </div>
+            </div>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</div>
+
+{{ end }}

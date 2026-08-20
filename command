@@ -1,0 +1,10 @@
+1. $impeccable harden — Fix the broken conversion funnel (your P0s): parse ui/html/auth/* and ui/html/layouts/* into the template cache so register.html/login.html actually render (they're 0-byte and never parsed — every CTA 500s); add real register/login templates; add a GET /register → 200 test; give /about, /contact, /privacy, /terms real routes or remove the footer links. Also fixes the P3 JS-failure blank-screen (.fade-up/.learning-step opacity:0 gated behind JS).
+2. $impeccable onboard — Preserve role intent at the boundary: read ?role=teacher|student in showRegisterForm, persist it as a hidden field, prefill the role choice so the two-sided promise survives the first real screen.
+3. $impeccable distill — Compress the mid-page mocks: cut from five full-width dashboard panels to hero + role-split, and shrink quiz-preview, personalized, and study-groups into lighter formats so CTAs surface sooner and the type-floor/contrast/clipping hazards inside the mocks mostly disappear.
+4. $impeccable layout — Render the navbar/footer (dead navbar.html/footer.html components), wrap content in <main>, add the missing #for-teachers/#for-students anchors, and reflow the study-match visual at ≤767px instead of scale(0.88).
+5. $impeccable audit — Accessibility baseline: wire the four quiz-builder label/for pairs, implement the full ARIA tabs pattern (roving tabindex, arrow keys, aria-controls, role="tabpanel"), and add global :focus-visible styles.
+6. $impeccable delight — Kill the fake interactivity: make "Generate quiz"/"Review question"/mock "Help" decorative or wire them, so the product never visibly lies.
+7. $impeccable colorize + $impeccable shape — Reconcile CSS with DESIGN.md after the surface is cut: normalize the #2563eb and variant gradients to --gradient-ai, map the 14 radius values onto 8/12/16/20, restore the mobile display floor (≥3rem), and re-align title weights/rhythm.
+8. $impeccable polish — Final quality pass over the result before you ship.
+You can ask me to run these one at a time, all at once, or in any order you prefer.
+Re-run $impeccable critique after fixes to see your score improve.
