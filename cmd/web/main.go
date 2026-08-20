@@ -159,13 +159,20 @@ func openDB(cfg config) (*pgxpool.Pool, error) {
 func newTemplateCache() (map[string]*template.Template, error) {
 	cache := map[string]*template.Template{}
 
-	pages, err := filepath.Glob("./ui/html/pages/*/*.html")
+	pageFiles, err := filepath.Glob("./ui/html/pages/*/*.html")
 	if err != nil {
 		return nil, err
 	}
 
-	for _, page := range pages {
-		name := filepath.Base(page)
+	authFiles, err := filepath.Glob("./ui/html/auth/*.html")
+	if err != nil {
+		return nil, err
+	}
+
+	files := append(pageFiles, authFiles...)
+
+	for _, file := range files {
+		name := filepath.Base(file)
 
 		ts, err := template.ParseFiles("./ui/html/layouts/base.html")
 		if err != nil {
@@ -177,7 +184,12 @@ func newTemplateCache() (map[string]*template.Template, error) {
 			return nil, err
 		}
 
-		ts, err = ts.ParseFiles(page)
+		ts, err = ts.ParseGlob("./ui/html/auth/*.html")
+		if err != nil {
+			return nil, err
+		}
+
+		ts, err = ts.ParseFiles(file)
 		if err != nil {
 			return nil, err
 		}
