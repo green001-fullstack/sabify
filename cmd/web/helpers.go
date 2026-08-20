@@ -6,7 +6,15 @@ import (
 	"net/http"
 	"runtime/debug"
 	"time"
+
+	"sabify/internal/models"
 )
+
+type AIInsight struct {
+	Type    string
+	Title   string
+	Message string
+}
 
 type templateData struct {
 	CurrentYear int
@@ -15,6 +23,15 @@ type templateData struct {
 	Flash       string
 	Form        map[string]string
 	FormErrors  map[string]string
+
+	TotalCourses       int
+	TotalStudents      int
+	ActiveQuizzes      int
+	AveragePerformance float64
+	RecentSubmissions  []models.SubmissionWithDetails
+	AIInsights         []AIInsight
+	AttentionStudents  []models.AttentionStudent
+	TeacherName        string
 }
 
 func (app *application) serverError(w http.ResponseWriter, err error) {

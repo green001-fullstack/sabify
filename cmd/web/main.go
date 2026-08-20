@@ -159,6 +159,15 @@ func openDB(cfg config) (*pgxpool.Pool, error) {
 func newTemplateCache() (map[string]*template.Template, error) {
 	cache := map[string]*template.Template{}
 
+	funcMap := template.FuncMap{
+		"multiply": func(a, b int) float64 {
+			if b == 0 {
+				return 0
+			}
+			return float64(a) / float64(b) * 100
+		},
+	}
+
 	pages, err := filepath.Glob("./ui/html/pages/*/*.html")
 	if err != nil {
 		return nil, err
@@ -167,7 +176,7 @@ func newTemplateCache() (map[string]*template.Template, error) {
 	for _, page := range pages {
 		name := filepath.Base(page)
 
-		ts, err := template.ParseFiles("./ui/html/layouts/base.html")
+		ts, err := template.New("base").Funcs(funcMap).ParseFiles("./ui/html/layouts/base.html")
 		if err != nil {
 			return nil, err
 		}
