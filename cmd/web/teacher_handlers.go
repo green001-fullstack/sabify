@@ -12,7 +12,7 @@ func (app *application) teacherCourses(w http.ResponseWriter, r *http.Request) {
 	data := app.newTemplateData(r)
 	data.Title = "My Courses"
 
-	app.render(w, http.StatusOK, "teacher-courses.html", data)
+	app.render(w, http.StatusOK, "teacher/courses.html", data)
 }
 
 func (app *application) createCourse(w http.ResponseWriter, r *http.Request) {
@@ -37,7 +37,7 @@ func (app *application) createCourse(w http.ResponseWriter, r *http.Request) {
 			"description": description,
 		}
 		data.FormErrors = v.GetFieldErrors()
-		app.render(w, http.StatusUnprocessableEntity, "create-course.html", data)
+		app.render(w, http.StatusUnprocessableEntity, "teacher/create-course.html", data)
 		return
 	}
 
@@ -63,26 +63,26 @@ func (app *application) teacherCourseDetail(w http.ResponseWriter, r *http.Reque
 	data := app.newTemplateData(r)
 	data.Title = "Course Detail"
 
-	app.render(w, http.StatusOK, "teacher-course-detail.html", data)
+	app.render(w, http.StatusOK, "teacher/course-detail.html", data)
 }
 
 func (app *application) teacherQuizzes(w http.ResponseWriter, r *http.Request) {
 	data := app.newTemplateData(r)
 	data.Title = "My Quizzes"
 
-	app.render(w, http.StatusOK, "teacher-quizzes.html", data)
+	app.render(w, http.StatusOK, "teacher/quizzes.html", data)
 }
 
 func (app *application) createQuiz(w http.ResponseWriter, r *http.Request) {
 	data := app.newTemplateData(r)
 	data.Title = "Create Quiz"
 
-	app.render(w, http.StatusOK, "create-quiz.html", data)
+	app.render(w, http.StatusOK, "teacher/create-quiz.html", data)
 }
 
 func (app *application) teacherSubmissions(w http.ResponseWriter, r *http.Request) {
 	data := app.newTemplateData(r)
 	data.Title = "Submissions"
 
-	app.render(w, http.StatusOK, "teacher-submissions.html", data)
+	app.render(w, http.StatusOK, "teacher/submissions.html", data)
 }
