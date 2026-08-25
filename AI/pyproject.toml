@@ -7,7 +7,17 @@ authors = [
     { name = "samuel", email = "sodiqsamuel7@gmail.com" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "boto3>=1.43.78",
+    "chromadb>=1.5.9",
+    "langchain-chroma>=1.1.0",
+    "langchain-community>=0.4.2",
+    "langchain-core>=1.6.0",
+    "langchain-text-splitters>=1.1.2",
+    "openai>=3.3.1",
+    "pypdf>=6.16.2",
+    "python-dotenv>=1.2.3",
+]
 
 [project.scripts]
 ai = "ai:main"
